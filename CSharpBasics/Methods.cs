@@ -2,7 +2,7 @@ using System;
 using EnumsAndProperties;
 public class MethodTeacher{
     // simple\
-    static void Main4()
+    static void Main44()
     {
         MethodTeacher methodTeacher = new MethodTeacher();
         double sum = methodTeacher.Sum(234.56,32445.2);
@@ -59,7 +59,7 @@ public class MethodTeacher{
  
 public class MethodTester 
  {
-     static void Main()
+     static void Main64()
     {
         MethodTeacher methodTeacher = new MethodTeacher();
         int[] numbers = {34,563,45,7,8,90,678,342,435412112,1,0,6,43,4};
