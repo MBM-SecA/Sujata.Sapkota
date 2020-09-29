@@ -9,6 +9,9 @@ namespace LINQ
     {
         static void Main()
         {
+            ComplexType complexType =new ComplexType();
+            complexType.LearnLINQ();
+
             //LINQ - Language Integrated Query
             //LINQ to objects
             int[] numbers = { 23, 34, 56, 12, 23, 89, 67, 10, 445, 32, 66, 69 };
@@ -23,10 +26,10 @@ namespace LINQ
             var result4 = from y in names where y.Length > 3 && y.ToLower().StartsWith("r") select y;
  
             
-            foreach(var name  in result4)
-            {
-                Console.WriteLine(name);
-            }
+           // foreach(var name  in result4)
+            //{
+             //   Console.WriteLine(name);
+           // }
  
              // projections
              var result5 = numbers.Select (x => x* x);
