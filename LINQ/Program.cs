@@ -48,10 +48,10 @@ namespace LINQ
              var result12 = Enumerable.Repeat("Hello World", 10);
 
 
-             foreach (var num in result7)
+            /* foreach (var num in result7)
              {
                  Console.WriteLine(num);
-             }
+             }*/
         }
     }
 }
