@@ -3,5 +3,8 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
-
+  <ItemGroup>
+  <packageReference Include="Microsoft.EntityFrameworkCore" Version=" 3.1.10"/>
+  <packageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version=" 3.1.10"/>
+   </ItemGroup>
 </Project>
