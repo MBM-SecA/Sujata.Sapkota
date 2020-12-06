@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["TitlePhrase"] - EmployeeManagement</title>
+    <title>@ViewData["Title"] - EmployeeManagement</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -11,37 +11,41 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-primary border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EMS</a>
+                <a class="navbar-brand" href="/home/index">EMS</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item dropdown">
+                        @* <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li> *@
+                        <li>
+                            <div class="btn-group">
+  <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Employee
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="/employee/index">List</a>
+    <a class="dropdown-item" href="/employee/add">Add Employee</a>
+    <div class="dropdown-divider"></div>
+  </div>
+  <div>
+    <button type="button" class="btn btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Departments
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="/department/index">List</a>
+    <a class="dropdown-item" href="/department/add">Add Department</a>
+    <div class="dropdown-divider"></div>
+  </div>
+</div>
 
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-
-                            data-toggle="dropdown">
-
-                                Employee
-
-                            </a>
-
-                            <div class="dropdown-menu">
-
-                                <a class="dropdown-item" asp-controller="Employee" asp-action="Add">Add Employee</a>
-
-                                <a class="dropdown-item" asp-controller="Employee" asp-action="Index">List Employees</a>                                
-
-                            </div>
-
-                        </li>
-
-
-
+                        <li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
                         </li>
                     </ul>
                 </div>
@@ -62,8 +66,10 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src ="~/lib/jquery-Validation/dist/jquery.validate.min.js"></script>
-    <script src ="~/lib/jquery-Validation-unobtrusive/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery-validation-unobtrusive.js"></script>
+
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
